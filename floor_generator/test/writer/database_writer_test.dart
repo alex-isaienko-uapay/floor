@@ -36,8 +36,9 @@ void main() {
         }
       
         Future<sqflite.Database> open(String path, List<Migration> migrations,
-            [Callback callback]) async {
+            [Callback callback, String password]) async {
           final databaseOptions = sqflite.OpenDatabaseOptions(
+            password: password,
             version: 1,
             onConfigure: (database) async {
               await database.execute('PRAGMA foreign_keys = ON');
@@ -90,8 +91,9 @@ void main() {
         }
         
         Future<sqflite.Database> open(String path, List<Migration> migrations,
-            [Callback callback]) async {
+            [Callback callback, String password]) async {
           final databaseOptions = sqflite.OpenDatabaseOptions(
+            password: password,
             version: 1,
             onConfigure: (database) async {
               await database.execute('PRAGMA foreign_keys = ON');
@@ -152,8 +154,9 @@ void main() {
         }
       
         Future<sqflite.Database> open(String path, List<Migration> migrations,
-            [Callback callback]) async {
+            [Callback callback, String password]) async {
           final databaseOptions = sqflite.OpenDatabaseOptions(
+            password: password,
             version: 1,
             onConfigure: (database) async {
               await database.execute('PRAGMA foreign_keys = ON');
