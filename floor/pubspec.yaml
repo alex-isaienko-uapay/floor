@@ -14,7 +14,10 @@ dependencies:
   sqflite_sqlcipher: ^1.1.2
   sqflite_common_ffi: ^1.1.1
   floor_annotation:
-    path: ../floor_annotation/
+     git:
+      url: https://github.com/kevin-X-lee/floor.git
+      path: floor_annotation
+      ref: sqlcipher
   meta: ^1.2.3
   flutter:
     sdk: flutter
