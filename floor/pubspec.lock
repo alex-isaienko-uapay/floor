@@ -200,9 +200,11 @@ packages:
   floor_annotation:
     dependency: "direct main"
     description:
-      path: "../floor_annotation"
-      relative: true
-    source: path
+      path: floor_annotation
+      ref: sqlcipher
+      resolved-ref: "5747d88e554ae80048776204dac3c8cfadd8fa06"
+      url: "https://github.com/kevin-X-lee/floor.git"
+    source: git
     version: "0.10.0"
   floor_generator:
     dependency: "direct dev"
