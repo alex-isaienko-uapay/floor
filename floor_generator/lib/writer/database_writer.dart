@@ -110,7 +110,7 @@ class DatabaseWriter implements Writer {
       ..requiredParameters.addAll([pathParameter, migrationsParameter])
       ..optionalParameters.addAll([callbackParameter, passwordParameter])
       ..body = Code('''
-          final databaseOptions = sqflite.OpenDatabaseOptions(
+          final databaseOptions = sqflite.SqlCipherOpenDatabaseOptions(
             password: password,
             version: ${database.version},
             onConfigure: (database) async {
